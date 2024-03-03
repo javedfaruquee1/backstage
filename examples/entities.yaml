@@ -46,8 +46,12 @@ kind: Component
 metadata:
   name: Xalt-Cloudlink-API
   description: Xalt CloudLink API Repo Azure
+  system: Xalt Configuration
   annotations:
     dev.azure.com/project-repo: "Xalt Configuration/Xalt-CloudLink-API"
+    dev.azure.com/readme-path: README.md
+    backstage.io/techdocs-ref: README.md
+    dev.azure.com/host-org: dev.azure.com/HexagonXalt
 spec:
   type: service
   lifecycle: experimental

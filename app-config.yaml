@@ -42,8 +42,23 @@ integrations:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
     #   token: ${GHE_TOKEN}   
+  # azure:
+  #   - host: "dev.azure.com"
+  #     credentials:
+  #       - personalAccessToken: "dj3thfij4v6jqml4dtwk5shbx34ptgyeqocddwmsuwkfilmsal2a"
+  #         organizations:
+  #           - HexagonXalt 
+  # azureDevOps:
+  #   host: dev.azure.com
+  #   token: 3r6okdv23fm4bjt3enndp74nm6r2lw3bep5lixjgr2gadcpa3mdq
+  #   organization: HexagonXalt
 
 proxy:
+  '/azure-devops/api':
+    # May be a public or an internal DNS
+    target: https://dev.azure.com
+    headers:
+      Authorization: Bearer 3r6okdv23fm4bjt3enndp74nm6r2lw3bep5lixjgr2gadcpa3mdq
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:
