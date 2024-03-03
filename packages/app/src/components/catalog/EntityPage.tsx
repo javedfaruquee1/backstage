@@ -58,6 +58,15 @@ import {
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 
+import {
+  EntityAzurePipelinesContent,
+  isAzureDevOpsAvailable,
+  isAzurePipelinesAvailable,
+  EntityAzurePullRequestsContent,
+  EntityAzureGitTagsContent,
+  EntityAzureReadmeCard,
+} from '@backstage/plugin-azure-devops';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -72,6 +81,14 @@ const cicdContent = (
   <EntitySwitch>
     <EntitySwitch.Case if={isGithubActionsAvailable}>
       <EntityGithubActionsContent />
+    </EntitySwitch.Case>
+^
+    <EntitySwitch.Case if={isAzureDevOpsAvailable}>
+      <EntityAzurePipelinesContent defaultLimit={25} />
+    </EntitySwitch.Case>
+
+    <EntitySwitch.Case if={isAzurePipelinesAvailable}>
+      <EntityAzurePipelinesContent defaultLimit={25} />
     </EntitySwitch.Case>
 
     <EntitySwitch.Case>
@@ -137,6 +154,20 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+
+    <Grid container spacing={3} alignItems="stretch">
+      <EntitySwitch>
+        <EntitySwitch.Case if={isAzureDevOpsAvailable}>
+          <Grid item md={6}>
+            ...
+          </Grid>
+          <Grid item md={6}>
+            <EntityAzureReadmeCard maxHeight={350} />
+          </Grid>
+        </EntitySwitch.Case>
+      </EntitySwitch>
+    </Grid>
+
   </Grid>
 );
 
@@ -175,6 +206,15 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>
+
+    <EntityLayout.Route if={isAzureDevOpsAvailable} path="/pull-requests" title="Pull Requests">
+      <EntityAzurePullRequestsContent defaultLimit={25} />
+    </EntityLayout.Route>
+
+    <EntityLayout.Route if={isAzureDevOpsAvailable} path="/git-tags" title="Git Tags">
+      <EntityAzureGitTagsContent />
+    </EntityLayout.Route>
+
   </EntityLayout>
 );
 

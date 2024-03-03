@@ -41,7 +41,7 @@ integrations:
     ### Example for how to add your GitHub Enterprise instance using the API:
     # - host: ghe.example.net
     #   apiBaseUrl: https://ghe.example.net/api/v3
-    #   token: ${GHE_TOKEN}
+    #   token: ${GHE_TOKEN}   
 
 proxy:
   ### Example for how to add a proxy endpoint for the frontend.
