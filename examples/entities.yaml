@@ -45,6 +45,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Xalt-Cloudlink-API
+  description: Xalt CloudLink API Repo Azure
   annotations:
     dev.azure.com/project-repo: "Xalt Configuration/Xalt-CloudLink-API"
 spec:

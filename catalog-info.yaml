@@ -11,16 +11,3 @@ spec:
   type: website
   owner: john@example.com
   lifecycle: experimental
----
-# Example catalog-info.yaml entity definition file
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: Xalt-Cloudlink-API
-  description: Xalt CloudLink API Repo Azure
-  annotations:
-    dev.azure.com/project-repo: "Xalt Configuration/Xalt-CloudLink-API"
-spec:
-  type: service
-  lifecycle: experimental
-  owner: guests
