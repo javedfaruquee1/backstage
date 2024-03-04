@@ -112,6 +112,17 @@ catalog:
       rules:
         - allow: [User, Group]
 
+    - type: url
+      target: https://gitlab.com/hexagon-gl/hub-cng/hipe/hipe-template/-/blob/main/cng/node-service/template.yaml
+      rules:
+        - allow: [Template]
+ 
+    # Local example template
+    - type: file
+      target: ../../examples/template/S3/template.yaml
+      rules:
+        - allow: [Template] 
+        
     ## Uncomment these lines to add more example data
     # - type: url
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
