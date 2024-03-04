@@ -11,3 +11,20 @@ spec:
   type: website
   owner: john@example.com
   lifecycle: experimental
+---
+# Example add devops project
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Xalt-DevOps
+  description: Xalt Pipeline Template Repo Azure
+  system: Xalt DevOps
+  annotations:
+    dev.azure.com/project-repo: "Xalt DevOps/xalt-azure-pipeline-templates"
+    dev.azure.com/readme-path: README.md
+    backstage.io/techdocs-ref: README.md
+    dev.azure.com/host-org: dev.azure.com/HexagonXalt
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests  

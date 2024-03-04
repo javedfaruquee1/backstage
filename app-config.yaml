@@ -1,9 +1,9 @@
 app:
-  title: Scaffolded Backstage App
+  title: Hexagon Backstage
   baseUrl: http://localhost:3000
 
 organization:
-  name: My Company
+  name: Hexagon
 
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
@@ -54,11 +54,16 @@ integrations:
   #   organization: HexagonXalt
 
 proxy:
-  '/azure-devops/api':
-    # May be a public or an internal DNS
-    target: https://dev.azure.com
-    headers:
-      Authorization: Bearer 3r6okdv23fm4bjt3enndp74nm6r2lw3bep5lixjgr2gadcpa3mdq
+  # '/azure-devops/api':
+  #   # May be a public or an internal DNS
+  #   target: https://dev.azure.com
+  #   headers:
+  #     Authorization: Bearer 3r6okdv23fm4bjt3enndp74nm6r2lw3bep5lixjgr2gadcpa3mdq
+  # '/azure-org/api':
+  #   # May be a public or an internal DNS
+  #   target: https://dev.azure.com
+  #   headers:
+  #     Authorization: Bearer au5bekl6s27aq75ftz73ml2jxikpkg6y3gfcwwqrdfpi27xqnlfa    
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:

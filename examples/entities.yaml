@@ -50,8 +50,42 @@ metadata:
   annotations:
     dev.azure.com/project-repo: "Xalt Configuration/Xalt-CloudLink-API"
     dev.azure.com/readme-path: README.md
-    backstage.io/techdocs-ref: README.md
+    backstage.io/techdocs-ref: dir:.
     dev.azure.com/host-org: dev.azure.com/HexagonXalt
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
+---
+# Example add devops project
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Xalt-DevOps
+  description: Xalt Pipeline Template Repo Azure
+  system: Xalt-DevOps
+  annotations:
+    dev.azure.com/project-repo: "Xalt DevOps/xalt-azure-pipeline-templates"
+    dev.azure.com/readme-path: README.md
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/host-org: dev.azure.com/HexagonXalt
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
+---
+# Example different organization
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: My-Organization
+  description: My Azure Organization
+  system: Self 
+  annotations:
+    dev.azure.com/project-repo: "javedfaruquee/javedfaruquee"
+    dev.azure.com/readme-path: README.md
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/host-org: dev.azure.com/javedfaruquee0654
 spec:
   type: service
   lifecycle: experimental
