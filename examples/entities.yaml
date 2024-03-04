@@ -50,7 +50,7 @@ metadata:
   annotations:
     dev.azure.com/project-repo: "Xalt Configuration/Xalt-CloudLink-API"
     dev.azure.com/readme-path: README.md
-    backstage.io/techdocs-ref: dir:.
+    #backstage.io/techdocs-ref: dir:.
     dev.azure.com/host-org: dev.azure.com/HexagonXalt
 spec:
   type: service
@@ -67,7 +67,7 @@ metadata:
   annotations:
     dev.azure.com/project-repo: "Xalt DevOps/xalt-azure-pipeline-templates"
     dev.azure.com/readme-path: README.md
-    backstage.io/techdocs-ref: dir:.
+    #backstage.io/techdocs-ref: dir:.
     dev.azure.com/host-org: dev.azure.com/HexagonXalt
 spec:
   type: service
@@ -84,7 +84,7 @@ metadata:
   annotations:
     dev.azure.com/project-repo: "javedfaruquee/javedfaruquee"
     dev.azure.com/readme-path: README.md
-    backstage.io/techdocs-ref: dir:.
+    #backstage.io/techdocs-ref: dir:.
     dev.azure.com/host-org: dev.azure.com/javedfaruquee0654
 spec:
   type: service
