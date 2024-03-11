@@ -44,6 +44,7 @@ import {
   Direction,
   EntityCatalogGraphCard,
 } from '@backstage/plugin-catalog-graph';
+
 import {
   RELATION_API_CONSUMED_BY,
   RELATION_API_PROVIDED_BY,

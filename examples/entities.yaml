@@ -65,9 +65,6 @@ metadata:
   title: "Xalt Devops"
   description: Xalt Pipeline Template Repo Azure
   system: Xalt-DevOps
-  tags:
-    - CNGDevops
-    - PipelineTemplate
   links:
     - url: https://dev.azure.com/HexagonXalt/Xalt%20DevOps/_boards/board/t/Xalt%20Cloud%20Native%20team/Stories
       title: Project board  
