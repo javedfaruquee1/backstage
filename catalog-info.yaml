@@ -11,3 +11,30 @@ spec:
   type: website
   owner: john@example.com
   lifecycle: experimental
+---
+  # Example add devops project
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Xalt-DevOps
+  title: "Xalt Devops"
+  description: Xalt Pipeline Template Repo Azure
+  system: Xalt-DevOps
+  tags:
+    - CNGDevops
+    - PipelineTemplate
+  links:
+    - url: https://dev.azure.com/HexagonXalt/Xalt%20DevOps/_boards/board/t/Xalt%20Cloud%20Native%20team/Stories
+      title: Project board  
+      icon: dashboard   
+      type: admin-dashboard
+  annotations:
+    backstage.io/source-location: url:https://dev.azure.com/HexagonXalt/Xalt%20DevOps/_git/xalt-azure-pipeline-templates
+    dev.azure.com/project-repo: "Xalt DevOps/xalt-azure-pipeline-templates"
+    #dev.azure.com/readme-path: https://dev.azure.com/javedfaruquee0654/_git/javedfaruquee?path=/README.md&version=GBmain&_a=contents
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/host-org: dev.azure.com/HexagonXalt
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests

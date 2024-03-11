@@ -81,7 +81,7 @@ metadata:
     dev.azure.com/host-org: dev.azure.com/HexagonXalt
 spec:
   type: service
-  lifecycle: deployment
+  lifecycle: experimental
   owner: guests
 ---
 # Example different organization
